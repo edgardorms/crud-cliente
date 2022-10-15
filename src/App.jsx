@@ -7,7 +7,9 @@ import Navbar from './components/Navbar';
 import {UserContextProvider} from './Context/UserContext';
 
 function App() {
-  return (
+  return (<div className='bg-gray-100 h-screen'>
+
+  
      <UserContextProvider>
     <Navbar></Navbar>
       <Routes>
@@ -17,6 +19,7 @@ function App() {
       <Route path='*' element={<NotFound/>}/>
     </Routes>
     </UserContextProvider>
+    </div>
   )
 }
 

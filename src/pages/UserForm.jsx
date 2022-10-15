@@ -28,7 +28,7 @@ function UserForm() {
   }, []);
   return (
     <div>
-      <h1>{params._id ? "Edit user" : "Create user"}</h1>
+      <h1 className="font-sans text-zinc-700 mx-8">{params._id ? "Edit user" : "Create user"}</h1>
       <Formik
         initialValues={user}
         enableReinitialize={true}
@@ -43,35 +43,38 @@ function UserForm() {
         }}
       >
         {({ handleChange, handleSubmit, values, isSubmitting }) => (
-          <Form onSubmit={handleSubmit}>
-            <label>name</label>
+          <Form onSubmit={handleSubmit} className="flex flex-col md:justify-center md:items-center sm:block">
+            
             <input
+            className="p-2 bg-white border shadow rounded w-60 m-2"
               type="text"
               name="name"
-              placeholder="write a title"
+              placeholder="Name"
               onChange={handleChange}
               value={values.name}
             />
 
-            <label>age</label>
+            
             <input
+            className="p-2 bg-white border shadow rounded w-20 m-2"
               type="number"
               name="age"
-              placeholder="write a age"
+              placeholder="Age"
               onChange={handleChange}
               value={values.age}
             ></input>
 
-            <label>email</label>
+            
             <input
+              className="p-2 bg-white border shadow rounded w-89 m-2"
               type="text"
               name="email"
-              placeholder="write a email"
+              placeholder="Email"
               onChange={handleChange}
               value={values.email}
             ></input>
 
-            <button type="submit" disabled={isSubmitting}>
+            <button type="submit" disabled={isSubmitting} className="btn bg-gray-200 hover:bg-gray-300 px-4 py-2 font-medium rounded m-3">
               {isSubmitting ? "Saving..." : "Save"}
             </button>
           </Form>
