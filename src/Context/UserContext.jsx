@@ -3,7 +3,8 @@ import {
   getUserRequest,
   deleteUserRequest,
   createUserRequest,
-  updateUserRequest
+  updateUserRequest,
+  API_URL
 } from "../api/users.api";
 
 import axios from 'axios';
@@ -46,7 +47,7 @@ export const UserContextProvider = ({ children }) => {
 
   const getUser = async (_id) => {
    try {
-    const response = await axios.get(`http://localhost:4000/api/users/${_id}`)
+    const response = await axios.get(API_URL + _id);
     return response.data
     console.log(response.data);
    } catch (error) {  
@@ -58,7 +59,7 @@ export const UserContextProvider = ({ children }) => {
     const updateUser = async (_id, newInfo) => {
     try {
       const response = await updateUserRequest(_id, newInfo);
-      //console.log(response); 
+      console.log(response); 
     } catch (error) {
       console.error(error);
     }

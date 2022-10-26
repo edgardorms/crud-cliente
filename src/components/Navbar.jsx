@@ -6,7 +6,7 @@ function Navbar() {
 <div className="flex justify-center">
       <Link to="/"
         type="button" 
-        class="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-8 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+        className="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-8 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
       > Home
         
       </Link>
@@ -14,7 +14,7 @@ function Navbar() {
       <Link
         to="/new"
         type="button"
-        class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-8 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline"
+        className="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-8 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline"
       > New User
         
       </Link>

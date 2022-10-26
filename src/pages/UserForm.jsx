@@ -24,11 +24,13 @@ function UserForm() {
         });
       }
     };
+    console.log(user);
     cargaUser();
   }, []);
+  console.log(user);
   return (
     <div>
-      <h1 className="font-sans text-zinc-700 mx-8">{params._id ? "Edit user" : "Create user"}</h1>
+      <h1 className="text-zinc-700 mx-8">{params._id ? "Edit user" : "Create user"}</h1>
       <Formik
         initialValues={user}
         enableReinitialize={true}

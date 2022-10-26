@@ -1,16 +1,17 @@
 import axios from "axios";
 
+export const API_URL = 'https://crud-edgardorms.herokuapp.com/api/users/'
 export const getUserRequest = async () =>
-  await axios.get("http://localhost:4000/api/users");
+  await axios.get(API_URL);
 
 export const createUserRequest = async (user) => {
-  await axios.post("http://localhost:4000/api/users", user);
+  await axios.post(API_URL, user);
 };
 
 export const deleteUserRequest = async (_id) => {
-  await axios.delete(`http://localhost:4000/api/users/${_id}`);
+  await axios.delete(API_URL + _id);
 };
 
 export const updateUserRequest = async (_id, newInfo) =>{
-  await axios.put(`http://localhost:4000/api/users/${_id}`, newInfo);
+  await axios.put(API_URL + _id, newInfo);
 }

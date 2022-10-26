@@ -5,20 +5,20 @@ function UsersCard({ users }) {
   const { deleteUsers } = useUsers();
   const navigate = useNavigate();
   return (
-    <div class="grid col-span-4 relative">
+    <div className="grid col-span-4 relative">
       <a
-        class="group shadow-lg hover:shadow-2xl duration-200 delay-75 w-full bg-white rounded-sm py-6 pr-6 pl-9"
+        className="group shadow-lg hover:shadow-2xl duration-200 delay-75 w-full bg-white rounded-sm py-6 pr-6 pl-9"
         href=""
       >
-        <p class="text-2xl font-bold text-gray-500 group-hover:text-gray-700">
+        <p className="text-2xl font-bold text-gray-500 group-hover:text-gray-700">
           {" "}
           {users.name} {users.age}{" "}
         </p>
-        <p class="text-sm font-semibold text-gray-500 group-hover:text-gray-700 mt-2 leading-6">
+        <p className="text-sm font-semibold text-gray-500 group-hover:text-gray-700 mt-2 leading-6">
           {" "}
           {users.email}
         </p>
-        <div class="bg-blue-400 group-hover:bg-blue-600 h-full w-4 absolute top-0 left-0">
+        <div className="bg-blue-400 group-hover:bg-blue-600 h-full w-4 absolute top-0 left-0">
           {" "}
         </div>
         <button
