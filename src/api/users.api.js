@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_URL = 'https://crud-edgardorms.herokuapp.com/api/users/'
+export const API_URL = 'https://crud-edgardorms.onrender.com/api/users/'
 export const getUserRequest = async () =>
   await axios.get(API_URL);
 
